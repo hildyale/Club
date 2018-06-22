@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import Menu43 from './Components/Menu';
-import PropTypes from 'prop-types';
 import './App.css';
+import Footer from './Footer'
+import PropTypes from 'prop-types';
+import Header from './Header'
+import Navbar from './Navbar'
+
 
 class App extends Component {
-   static propTypes = {
-     children: PropTypes.object.isRequired 
-   };
+
+	static propTypes = {
+		children: PropTypes.object.isRequired 
+	};
 
   render() {
-    const { children } = this.props;
-
+		const { children } = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-        </header>
-        <div className="App-contenido">
-          <Menu43></Menu43>  
-          <div className="main">{children}</div>
+      <div id="wrapper">
+				<Header/>
+				<Navbar/>
+        <div id="main">
+          {children}
         </div>
-       
-        <div className="limpiador"><p>hola</p></div>
+        <Footer/>
       </div>
     );
   }

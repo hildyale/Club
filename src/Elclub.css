@@ -1,0 +1,37 @@
+#imagen{
+    background: url('./images/elclub.jpg') no-repeat center;
+    background-size: 909px 582px;
+    width: 909px;
+    height: 582px;
+}
+
+@media screen and (max-width: 1280px) {
+
+    #imagen {
+        width: 700px;
+        background-size: 700px 448px;
+        height: 448px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    #imagen {
+        width: 500px;
+        background-size: 500px 320px;
+        height: 320px;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 650px) {
+
+    #imagen {
+        display: none;
+    }
+    
+
+}
