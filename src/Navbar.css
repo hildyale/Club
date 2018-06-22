@@ -1,0 +1,120 @@
+#maskDrawer{
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 10000;
+}
+
+#navDrawer{
+    background: #ffffff;
+    box-shadow: none;
+    color: #212931;
+    height: 100%;
+    max-width: 80%;
+    padding: 3rem 2rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10001;
+}
+
+.showMask{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.hiddenMask{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+
+.showDrawer{
+    visibility: visible;
+    opacity: 1;
+    width: 20rem;
+    transition: 0.8s;
+}
+
+.hiddenDrawer{
+    visibility: hidden;
+    opacity: 0;
+    width: 0rem;
+    transition: 0.8s;
+}
+
+#navDrawer .links {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+#navDrawer .links li {
+    border-top: solid 2px #eeeeee;
+}
+
+    #navDrawer .links li a {
+        border-bottom: 0;
+        display: block;
+        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        font-size: 0.9rem;
+        font-size: 0.9rem;
+        font-weight: 900;
+        letter-spacing: 0.075em;
+        padding: 0.75rem 0;
+        text-transform: uppercase;
+    }
+
+    #navDrawer .links li:first-child {
+        border-top: 0;
+    }
+
+#navDrawer .close {
+text-decoration: none;
+-moz-transition: color 0.2s ease-in-out;
+-webkit-transition: color 0.2s ease-in-out;
+-ms-transition: color 0.2s ease-in-out;
+transition: color 0.2s ease-in-out;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+border: 0;
+color: #909498;
+cursor: pointer;
+display: block;
+height: 3.25rem;
+line-height: 3.25rem;
+padding-right: 1.25rem;
+position: absolute;
+right: 0;
+text-align: right;
+top: 0;
+vertical-align: middle;
+width: 7rem;
+}
+
+#navDrawer .close:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
+}
+
+#navDrawer .close:before {
+    content: '\f00d';
+    font-size: 1.25rem;
+}
+
+#navDrawer .close:hover {
+    color: #212931;
+}

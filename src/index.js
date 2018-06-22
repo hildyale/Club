@@ -35,7 +35,7 @@ ReactDOM.render(
                 <Route path="/Inicio" render={(props) => <Inicio {...props} datos={datos} />} />
                 <Route path="/Elclub" render={(props) => <Elclub {...props} datos={datos} />}/>
                 <Route path="/Inscripcion" render={(props) => <Inscripcion/>}/>
-                <Route path="/Inscripcion" render={(props) => <Estudiantes/>}/>
+                <Route path="/Estudiantes" render={(props) => <Estudiantes/>}/>
                 <Route path="/Otro1" component={Otro1}/>
                 <Route component={Page404}/> 
             </Switch>

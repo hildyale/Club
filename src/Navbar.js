@@ -1,7 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css'
 
 class Navbar extends Component {
+
+	constructor(){
+		super()
+    this.state = {
+			showMask: 'hiddenMask',
+			showDrawer: 'hiddenDrawer'
+		}
+
+		this.show = this.show.bind(this);
+		this.hide = this.hide.bind(this);
+	}
+
   render() {
 		const path = window.location.pathname
     var active = [];
@@ -43,10 +56,38 @@ class Navbar extends Component {
 						</ul>
 					</nav>
 					<div className="bg" ></div>
-					<a href="#navPanel" id="navPanelToggle">Menu</a>
+					<a onClick={this.show} id="navPanelToggle">Menu</a>
+					<div id="navDrawer" className={this.state.showDrawer}>
+						<nav>
+							<ul className="links">
+								<li className={active[0]}><Link onClick={this.hide} to="Inicio">Inicio</Link></li>
+								<li className={active[1]}><Link onClick={this.hide} to="Elclub">Elclub</Link></li>
+								<li className={active[2]}><Link onClick={this.hide} to="Otro1">Otro1</Link></li>
+								<li className={active[3]}><Link onClick={this.hide} to="Inscripcion">Inscripcion</Link></li>
+								<li className={active[4]}><Link onClick={this.hide} to="Estudiantes">Estudiantes</Link></li>
+							</ul>
+						</nav>
+						<span onClick={this.hide} className="close"></span>
+					</div>
+					<div id="maskDrawer" onClick={this.hide} className={this.state.showMask}/>
       </div>
     );
-  }
+	}
+	
+	show(){
+		this.setState({
+			showMask: 'showMask',
+			showDrawer: 'showDrawer'
+		})
+	}
+
+	hide(){
+		this.setState({
+			showMask: 'hiddenMask',
+			showDrawer: 'hiddenDrawer'
+		})
+	}
+
 }
 
 export default Navbar;
